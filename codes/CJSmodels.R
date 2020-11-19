@@ -1020,17 +1020,16 @@ mean.p ~ dunif(0, 1)                # Prior for mean recapture
 ###############
 
 # data from 293 marked birds with 7 capture occasions 
-dipper <- read.delim("https://raw.githubusercontent.com/oliviergimenez/multievent_jags_R/master/dipper.txt", sep = " ")
+dipper <- read.csv("dat/dipper.csv", sep = ";")
+head(dipper)
+dipper$sex <- ifelse(dipper$males == 1, 2, 1)
+head(dipper)
+dipper <- dipper[, -c(8,9)]
 dipper <- as.matrix(dipper)
-# remove the last column 
-dipper <- dipper[,-8]
-colnames(dipper) <- NULL
 head(dipper)
 
 # Estimate sex-specific survival, assuming constant capture probability
-
-# Estimate mean annual survival and temporal variance, assuming constant capture probability
-
+# Add temporal variance on top of survival in the model
 
 
 
@@ -1060,34 +1059,27 @@ head(dipper)
 
 
 
-
-
-
-# Create vector with occasion of marking
-f <- apply(dipper, 1, get.first)
 
 # Specify model in BUGS language
-cat(file = "cjs-temp.txt", "
+cat(file = "cjs-sex-temp.txt", "
 model {
     
     # Constraints
     for (i in 1:nind){
        for (t in 1:(n.occasions-1)){
-          logit(phi[i,t]) <- mu + epsilon[t]
+          logit(phi[i,t]) <- mu[sex[i]] + epsilon[t]
           p[i,t] <- mean.p
           } #t
        } #i
 
     for (t in 1:(n.occasions-1)){
        epsilon[t] ~ dnorm(0, tau)
-       
-       # calculate annual estimates of survival (optional)
-       phi.est[t] <- ilogit(mu + epsilon[t])
-       } #t
-    
+       }
+
     # Priors
     mean.p ~ dunif(0, 1)                     # Prior for mean recapture
-    mu ~ dnorm(0, 1)                    # Logit transformation
+    mu[1] ~ dnorm(0, 1)                      # Prior for mean female survival 
+    mu[2] ~ dnorm(0, 1)                      # Prior for mean male survival 
     sigma ~ dunif(0, 5)                      # Prior for standard deviation
     tau <- pow(sigma, -2)
     sigma2 <- pow(sigma, 2)                  # Temporal variance
@@ -1107,13 +1099,14 @@ model {
 ")
 
 # Bundle data
-jags.data <- list(y = dipper, f = f, nind = dim(dipper)[1], n.occasions = dim(dipper)[2])
+f <- apply(dipper[, 1:7], 1, get.first)
+jags.data <- list(y = dipper[,1:7], f = f, nind = dim(dipper)[1], n.occasions = dim(dipper[,1:7])[2], sex = dipper[, 8])
 
 # Initial values
-inits <- function(){list(z = z.inits(dipper), mu = rnorm(1, 0, 1), sigma = runif(1, 0, 5), mean.p = runif(1, 0, 1))}  
+inits <- function(){list(z = z.inits(dipper[,1:7]), mu = rnorm(2, 0, 1), sigma = runif(1, 0, 5), mean.p = runif(1, 0, 1))}  
 
 # Parameters monitored
-parameters <- c("mu", "phi.est", "mean.p", "sigma2")
+parameters <- c("mu", "mean.p", "sigma2")
 
 # MCMC settings
 ni <- 2000
@@ -1122,19 +1115,20 @@ nb <- 1000
 nc <- 3
 
 # Call JAGS from R (~ 1 min)
-cjs.dipper <- jags(jags.data, inits, parameters, "cjs-temp.txt", n.chains = nc, n.thin = nt, n.iter = ni, n.burnin = nb, parallel = TRUE)
+cjs.dipper <- jags(jags.data, inits, parameters, "cjs-sex-temp.txt", n.chains = nc, n.thin = nt, n.iter = ni, n.burnin = nb, parallel = TRUE)
 
 # Summarize posteriors
 print(cjs.dipper, digits = 3)
 
-# You know the drill: take a minute or two to compare your estimates
-# with the values we used to simulate the data
 
 # Produce histogram for temporal variance, with posterior mean in red
 hist(cjs.dipper$sims.list$sigma2, col = "gray", nclass=35, las=1, xlab = expression(sigma^2), main = "")
 abline(v = mean(cjs.dipper$sims.list$sigma2), col = "red", lwd = 2)
 
-
+# Estimated survival for females and males, respectively
+par(mfrow = c(1, 2))
+plot(density(plogis(cjs.dipper$sims.list$mu[,1])), xlab = "", ylab = "", main = "female survival")
+plot(density(plogis(cjs.dipper$sims.list$mu[,2])), xlab = "", ylab = "", main = "male survival")
 
 
 
