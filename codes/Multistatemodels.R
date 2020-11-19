@@ -19,15 +19,18 @@
 setwd('...')
 
 # Load multistate capture-histories
-data <- read.csv("Multistate.csv", sep = ";")
+data <- read.csv("dat/multistate.csv", sep = ";")
 ch <- as.matrix(data)
+ch
+nrow(ch)
+ncol(ch)
 
 ###############################################
 
 # A simple multistate model is shown (corresponding to chapter 9.2. in BPA)
 # There are 2 sites, at each site individuals are marked and recaptured
 # Individuals may move between these sites. The goal is to estimate site-specific survival and recapture probabilities as well as movement rates
-# Two approaches are presented: the state-space likelihood and the multinomial likelihood
+# Two approaches are presented: the state-space likelihood and the multinomial likelihood; we will focus on the former, the code is provided for the latter
 
 ###############################################
 

@@ -1,0 +1,3 @@
+- add bibliography
+- mention GOF tests w/ U-CARE and R2ucare, chapter on Gentle introduction
+- add some of my slides
