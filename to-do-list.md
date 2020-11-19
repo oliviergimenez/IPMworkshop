@@ -1,3 +1,5 @@
 - add bibliography
 - mention GOF tests w/ U-CARE and R2ucare, chapter on Gentle introduction
-- add some of my slides
+- add some of our slides on multievent models
+- add a slide Summary and/or Take-home messages
+- add a slide w/ bibliography and/or To go further
