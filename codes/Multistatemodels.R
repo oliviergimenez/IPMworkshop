@@ -2,7 +2,14 @@
 #
 # Multistate capture-recapture models
 #
-# IPM workshop, Las Cruces November 2019
+# IPM workshop, virtual Montpellier November 2020
+#
+################################################
+# Based on the book "Bayesian population analysis using WinBUGS - a hierarchical perspective" 
+# by Marc Kéry & Michael Schaub (2012, Academic Press)
+#########################################################################
+
+# Michael Schaub, Olivier Gimenez 19.11.2020
 #
 ################################################
 
