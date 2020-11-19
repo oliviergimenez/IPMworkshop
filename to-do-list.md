@@ -13,3 +13,10 @@
 - Introduce HMMs and our Ecol Let papers; actually, we use HMMs not general SSMs for IPMs; see also recent paper by Takis in Biometrics formulating IPMs as HMMs!
 - Add an example of multievent model in the multistate R script? Use the roe deer example from my TPB paper; check out the examples we cover in 
 - Put m-array stuff in another file, gathering single and multistate stuff (or two files, yet to be decided)
+- Provide link to Nimble translation of book? Add Nimble implementation of the exercises?
+- Translate the R scripts in Rmd?
+- The multistate example can be simplified, we don't need the loops on individuals/time to define the state matrices. In the exercise, we need the time loop. Mention that to add individual stuff, an extra loop on indiviuals is needed. Tension is with the lecture that presents the model with time and individual effect as the most general and generic model
+
+- Add multievent model https://github.com/oliviergimenez/multievent_jags_R ; make it an exercise; 
+- Present CJS as a particular case of the multistate, as in https://github.com/oliviergimenez/multievent_jags_R
+
