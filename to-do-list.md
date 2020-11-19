@@ -1,5 +1,14 @@
-- add bibliography
+- add bibliography w/ paper screenshots
 - mention GOF tests w/ U-CARE and R2ucare, chapter on Gentle introduction
 - add some of our slides on multievent models
 - add a slide Summary and/or Take-home messages
 - add a slide w/ bibliography and/or To go further
+- Write a slide w/ tricks to speed up the computations and improve convergence
+    - Marginalization (cite relevant paper I review for Ecol Monog); by hand, or using what is done in Nimble/Stan. 
+    - Nimble w/ NimbleEcology, Stan w/ tag Ecology
+    - Provide examples of IPM w/ Stan, with Nimble, with TMB/ADMB 
+    - m-arrays, but limitations when it comes to individual effect (random of covariates)
+    - TMB, Rcpp; to get you started, I have some code
+    - Other stuff?
+- Introduce HMMs and our Ecol Let papers; actually, we use HMMs not general SSMs for IPMs; see also recent paper by Takis in Biometrics formulating IPMs as HMMs!
+    
