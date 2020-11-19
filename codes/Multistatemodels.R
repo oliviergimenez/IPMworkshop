@@ -9,7 +9,8 @@
 # by Marc Kéry & Michael Schaub (2012, Academic Press)
 #########################################################################
 
-# Michael Schaub, Olivier Gimenez 19.11.2020
+# Michael Schaub
+# Olivier Gimenez 19.11.2020
 #
 ################################################
 
