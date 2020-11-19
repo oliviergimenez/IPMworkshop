@@ -11,4 +11,5 @@
     - TMB, Rcpp; to get you started, I have some code
     - Other stuff?
 - Introduce HMMs and our Ecol Let papers; actually, we use HMMs not general SSMs for IPMs; see also recent paper by Takis in Biometrics formulating IPMs as HMMs!
-    
+- Add an example of multievent model in the multistate R script? Use the roe deer example from my TPB paper; check out the examples we cover in 
+- Put m-array stuff in another file, gathering single and multistate stuff (or two files, yet to be decided)
