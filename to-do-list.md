@@ -15,9 +15,15 @@ On the slides:
 - Illustrate what dcat does; Categorical is a special case of the multinomial distribution with n = 1; The argument of the dcat distribution is a vector of probabilities for each category. 
 - Add a few memes
 - Tell how many neff we need for convergence
+- A few words to tell how we met back in Montpellier > 15 years ago Marc, Michael and I; Roger/Jean-Do in common, we're like cousin; introduce Maud 
+- Include pictures of key people in the capture-recapture world -> Rachel, Ruth, Eleni, Anita, etc.
+- Prepare a slide or two on waic for cjs then anova, with sim and dipper
+- Shall I use tablet/stylet
+- Sort out what I will be demonstrating in the script 
 
 On the practicals:
 
+- If too short to do the Rmd, just have a script for the lecture demo, and another one for exercises with and without solutions; show the matrices
 - Translate the R scripts in Rmd?
 - ~~Add an example of multievent model in the multistate R script? Use the roe deer example from my TPB paper https://github.com/oliviergimenez/multievent_jags_R; check out the examples we cover in our multievent workshops; make it an exercise;~~
 - ~~The multistate example can be simplified and made faster, we don't need the loops on individuals/time to define the state matrices. In the exercise, we need the time loop. Mention that to add individual stuff, an extra loop on individuals is needed. Tension is with the lecture that presents the model with time and individual effect as the most general and generic model~~
