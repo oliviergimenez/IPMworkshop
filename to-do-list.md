@@ -14,11 +14,12 @@ On the slides:
 - Present CJS as a particular case of the multistate, as in https://github.com/oliviergimenez/multievent_jags_R
 - Illustrate what dcat does; Categorical is a special case of the multinomial distribution with n = 1; The argument of the dcat distribution is a vector of probabilities for each category. 
 - Add a few memes
+- Tell how many neff we need for convergence
 
 On the practicals:
 
-- Add an example of multievent model in the multistate R script? Use the roe deer example from my TPB paper https://github.com/oliviergimenez/multievent_jags_R; check out the examples we cover in our multievent workshops; make it an exercise;
 - Translate the R scripts in Rmd?
-- The multistate example can be simplified, we don't need the loops on individuals/time to define the state matrices. In the exercise, we need the time loop. Mention that to add individual stuff, an extra loop on indiviuals is needed. Tension is with the lecture that presents the model with time and individual effect as the most general and generic model
+- ~~Add an example of multievent model in the multistate R script? Use the roe deer example from my TPB paper https://github.com/oliviergimenez/multievent_jags_R; check out the examples we cover in our multievent workshops; make it an exercise;~~
+- ~~The multistate example can be simplified and made faster, we don't need the loops on individuals/time to define the state matrices. In the exercise, we need the time loop. Mention that to add individual stuff, an extra loop on individuals is needed. Tension is with the lecture that presents the model with time and individual effect as the most general and generic model~~
 - ~~Put m-array stuff in another file, gathering single and multistate stuff (or two files, yet to be decided)~~
 - ~~Provide link to Nimble translation of book? Add Nimble implementation of the exercises? I won't do it; Maud has a full lecture to show-case Nimble~~

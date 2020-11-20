@@ -1017,6 +1017,10 @@ mean.p ~ dunif(0, 1)                # Prior for mean recapture
 
 ###############
 ### EXERCISE 2: Analyse real CR data of European dipper
+# The data we are going to analyze concern the European Dipper (Cinclus cinclus). 
+# Captures were carried out for 7 years (1981-1987) in eastern France by G. Marzolin who kindly provided us with the data. 
+# They consist of initial markings and recaptures of breeding adults each year during the March-June period. 
+# Birds were at least 1 year old when initially banded. 
 ###############
 
 # data from 293 marked birds with 7 capture occasions 
@@ -1029,33 +1033,48 @@ dipper <- as.matrix(dipper)
 head(dipper)
 
 # Estimate sex-specific survival, assuming constant capture probability
+
 # Add temporal variance on top of survival in the model
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#
+# You may find the solution code below
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 
 
 
