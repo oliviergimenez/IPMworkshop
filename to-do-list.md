@@ -1,5 +1,6 @@
 On the slides: 
 
+- To maintain animations, duplicate slides instead of using powerpoint features, it makes the pdf conversion safer
 - Add bibliography w/ paper screenshots
 - Mention GOF tests w/ U-CARE and R2ucare, chapter on Gentle introduction
 - Add some of our slides on multievent models
