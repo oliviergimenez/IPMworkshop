@@ -1,15 +1,13 @@
 Overall
 
-- Clean up prez multievent, ajouter BUGS code
-- Dia de conclusion sur speed
 - If breeding example in lectures, use same recoding for non-detections, and modify Michael's function for inits for multievent.
 - Prepare a slide or two on waic for cjs then anova, with sim and dipper
 - Shall I use tablet/stylet?
 - A few words to tell how we met back in Montpellier > 15 years ago Marc, Michael and I; Roger/Jean-Do in common, we're like cousin; introduce Maud 
 - Tell how many neff we need for convergence
 
-On the slides: 
-
+- ~~Clean up prez multievent, ajouter BUGS code~~
+- ~~Dia de conclusion sur speed~~
 - ~~Replace description du multi event par celle de Roger. Voir dans Base3. - Remplacer disease par breeding uncertainty, en lien avec l’exercice d’ailleurs.~~
 - ~~initial states: Multistate. It is known exactly: alive at site of initial capture~~
 - ~~Add the multi event are HMMs; Actually everything we've seen is an HMM.~~
@@ -26,9 +24,6 @@ On the slides:
 - ~~Mention GOF tests w/ U-CARE and R2ucare, chapter on Gentle introduction~~
 - ~~Add a slide w/ bibliography and/or To go further~~
 - ~~Include pictures of key people in the capture-recapture world -> Rachel, Ruth, Eleni, Anita, etc.~~
-
-On the practicals:
-
 - ~~Translate the R scripts in Rmd?~~
 - ~~If too short to do the Rmd, just have a script for the lecture demo, and another one for exercises with and without solutions; show the matrices~~
 - ~~Add an example of multievent model in the multistate R script? Use the roe deer example from my TPB paper https://github.com/oliviergimenez/multievent_jags_R; check out the examples we cover in our multievent workshops; make it an exercise;~~
