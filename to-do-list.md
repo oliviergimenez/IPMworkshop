@@ -1,6 +1,16 @@
 On the slides: 
 
-- Add some of our slides on multievent models
+- Where in the book about generalized logic and dirichlet?
+- Insérer définition de dcat()
+- Glisser des exemples de papiers pour chaque exemple (voir liste sur site workshop multievent)
+- Rajouter un example 0 pour montrer que CJS est un cas particulier de multistate
+- Cite Arnason-Schwarz papers 
+- Replace description du multi event par celle de Roger. Voir dans Base3. 
+- Remplacer disease par breeding uncertainty, en lien avec l’exercice d’ailleurs.
+- initial states: Multistate. It is known exactly: alive at site of initial capture
+- Transition between successive wintering sites can be viewed as involving two distinct processes: S : survival followed by Y : movement conditional on survival 
+- Add the multi event are HMMs; Actually everything we've seen is an HMM.
+- Papier Brett, Roland. 
 - Add a slide Summary and/or Take-home messages
 - Write a slide w/ tricks to speed up the computations and improve convergence
     - Marginalization (cite relevant paper I review for Ecol Monog); by hand <https://esajournals.onlinelibrary.wiley.com/doi/10.1002/eap.2112>, or relying what is done in Nimble (see <https://cran.r-project.org/web/packages/nimbleEcology/index.html>) or Stan (see <https://mc-stan.org/docs/2_22/stan-users-guide/latent-discrete-chapter.html>). 
