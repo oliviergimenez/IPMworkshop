@@ -1,11 +1,12 @@
 Overall
 
-- If breeding example in lectures, use same recoding for non-detections, and modify Michael's function for inits for multievent.
+- Write text of the slides
 - Prepare a slide or two on waic for cjs then anova, with sim and dipper
 - Shall I use tablet/stylet?
-- A few words to tell how we met back in Montpellier > 15 years ago Marc, Michael and I; Roger/Jean-Do in common, we're like cousin; introduce Maud 
 - Tell how many neff we need for convergence
 
+- ~~A few words to tell how we met back in Montpellier > 15 years ago Marc, Michael and I; Roger/Jean-Do in common, we're like cousin; introduce Maud~~
+- ~~If breeding example in lectures, use same recoding for non-detections, and modify Michael's function for inits for multievent.~~
 - ~~Clean up prez multievent, ajouter BUGS code~~
 - ~~Dia de conclusion sur speed~~
 - ~~Replace description du multi event par celle de Roger. Voir dans Base3. - Remplacer disease par breeding uncertainty, en lien avec l’exercice d’ailleurs.~~
