@@ -1,25 +1,26 @@
 On the slides: 
 
 - Where in the book about generalized logic and dirichlet?
-- Insérer définition de dcat()
-- Glisser des exemples de papiers pour chaque exemple (voir liste sur site workshop multievent)
-- Rajouter un example 0 pour montrer que CJS est un cas particulier de multistate
-- Cite Arnason-Schwarz papers 
+- Insérer définition de dcat(); Illustrate what dcat does; Categorical is a special case of the multinomial distribution with n = 1; The argument of the dcat distribution is a vector of probabilities for each category. 
+- Rajouter un example 0 pour montrer que CJS est un cas particulier de multistate; Present CJS as a particular case of the multistate, as in https://github.com/oliviergimenez/multievent_jags_R
 - Replace description du multi event par celle de Roger. Voir dans Base3. 
 - Remplacer disease par breeding uncertainty, en lien avec l’exercice d’ailleurs.
 - initial states: Multistate. It is known exactly: alive at site of initial capture
 - Transition between successive wintering sites can be viewed as involving two distinct processes: S : survival followed by Y : movement conditional on survival 
 - Add the multi event are HMMs; Actually everything we've seen is an HMM.
 - Papier Brett, Roland. 
-- Add a slide Summary and/or Take-home messages
 - Write a slide w/ tricks to speed up the computations and improve convergence
     - Marginalization (cite relevant paper I review for Ecol Monog); by hand <https://esajournals.onlinelibrary.wiley.com/doi/10.1002/eap.2112>, or relying what is done in Nimble (see <https://cran.r-project.org/web/packages/nimbleEcology/index.html>) or Stan (see <https://mc-stan.org/docs/2_22/stan-users-guide/latent-discrete-chapter.html>). 
     - m-arrays, but limitations when it comes to individual effect (random of covariates)
     - Stan, Nimble are often faster than Jags, in that they need less MCMC samples to reach convergence; TMB, Rcpp; to get you started, I have some code
     - Other stuff?
 - Introduce HMMs and our Ecol Let papers; actually, we use HMMs not general SSMs for IPMs; see also recent paper by Takis in Biometrics formulating IPMs as HMMs!
-- Present CJS as a particular case of the multistate, as in https://github.com/oliviergimenez/multievent_jags_R
-- Illustrate what dcat does; Categorical is a special case of the multinomial distribution with n = 1; The argument of the dcat distribution is a vector of probabilities for each category. 
+- Glisser des exemples de papiers pour chaque exemple (voir liste sur site workshop multievent); Cite Arnason-Schwarz papers 
+
+
+
+
+- Add a slide Summary and/or Take-home messages
 - Prepare a slide or two on waic for cjs then anova, with sim and dipper
 - Shall I use tablet/stylet?
 - A few words to tell how we met back in Montpellier > 15 years ago Marc, Michael and I; Roger/Jean-Do in common, we're like cousin; introduce Maud 
