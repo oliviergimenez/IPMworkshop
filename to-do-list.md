@@ -1,10 +1,7 @@
 On the slides: 
 
-- Rajouter un example 0 pour montrer que CJS est un cas particulier de multistate; CJS is a multistate model with 2 states. Present CJS as a particular case of the multistate, as in https://github.com/oliviergimenez/multievent_jags_R
-- Replace description du multi event par celle de Roger. Voir dans Base3. 
-- Remplacer disease par breeding uncertainty, en lien avec l’exercice d’ailleurs.
+- Replace description du multi event par celle de Roger. Voir dans Base3. - Remplacer disease par breeding uncertainty, en lien avec l’exercice d’ailleurs.
 - initial states: Multistate. It is known exactly: alive at site of initial capture
-- Transition between successive wintering sites can be viewed as involving two distinct processes: S : survival followed by Y : movement conditional on survival 
 - Add the multi event are HMMs; Actually everything we've seen is an HMM.
 - Papier Brett, Roland. 
 - Write a slide w/ tricks to speed up the computations and improve convergence
@@ -18,12 +15,14 @@ On the slides:
 
 
 
-- Add a slide Summary and/or Take-home messages
 - Prepare a slide or two on waic for cjs then anova, with sim and dipper
 - Shall I use tablet/stylet?
 - A few words to tell how we met back in Montpellier > 15 years ago Marc, Michael and I; Roger/Jean-Do in common, we're like cousin; introduce Maud 
 - Tell how many neff we need for convergence
 
+- ~~Transition between successive wintering sites can be viewed as involving two distinct processes: S : survival followed by Y : movement conditional on survival~~
+- ~~Add a slide Summary and/or Take-home messages~~
+- ~~Rajouter un example 0 pour montrer que CJS est un cas particulier de multistate; CJS is a multistate model with 2 states. Present CJS as a particular case of the multistate, as in https://github.com/oliviergimenez/multievent_jags_R~~
 - ~~Insérer définition de dcat(); Illustrate what dcat does; Categorical is a special case of the multinomial distribution with n = 1; The argument of the dcat distribution is a vector of probabilities for each category.~~
 - ~~Where in the book about generalized logic and dirichlet?~~
 - ~~Add a few memes and animated gifs~~
@@ -36,6 +35,7 @@ On the slides:
 
 On the practicals:
 
+- If breeding example in lectures, use same recoding for non-detections, and modify Michael's function for inits for multievent.
 - Translate the R scripts in Rmd?
 - ~~If too short to do the Rmd, just have a script for the lecture demo, and another one for exercises with and without solutions; show the matrices~~
 - ~~Add an example of multievent model in the multistate R script? Use the roe deer example from my TPB paper https://github.com/oliviergimenez/multievent_jags_R; check out the examples we cover in our multievent workshops; make it an exercise;~~
