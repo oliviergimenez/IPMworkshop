@@ -228,6 +228,9 @@ print(cjs.t.t, digits = 3)
 # Again, compare the estimates with the values we used to simulate the data. 
 
 
+
+
+
 ### UNDERSTANDING PARAMETER REDUNDANCY
 
 # Look at the parameter estimates: do you see anything conspicuous?
