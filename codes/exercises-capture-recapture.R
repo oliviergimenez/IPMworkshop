@@ -9,7 +9,7 @@
 # Captures were carried out for 7 years (1981-1987) in eastern France by G. Marzolin who kindly provided us with the data. 
 # They consist of initial markings and recaptures of 293 breeding adults each year during the March-June period. 
 # Birds were at least 1 year old when initially banded. 
-# Estimate sex-specific survival, assuming constant capture probability.
+# Estimate sex-specific survival, assuming constant recapture probability.
 # Add temporal variance on top of survival in the model.
 # To get you started, we read in the data and clean up the data. 
 ###########################
@@ -24,10 +24,13 @@ dipper <- dipper[, -c(8,9)]
 dipper <- as.matrix(dipper)
 head(dipper)
 
+
 # Specify model in BUGS language
 cat(file = "cjs-sex-temp.txt", "
 model {
     
+
+
     # Constraints
     for (i in 1:nind){
        for (t in 1:(n.occasions-1)){
@@ -136,7 +139,7 @@ plot(density(plogis(cjs.dipper$sims.list$mu[,2])),
 
 ###############
 ### EXERCISE 3: Write a multistate model w/ two states, 
-# in such a way that survival in A is time-dependent (fixed time effect) 
+# in such a way that survival in A is time-dependent (fixed time effects) 
 # and survival at site B it is time-dependent with a random temporal effect.
 ###########################
 
@@ -165,7 +168,7 @@ model {
 
 # Priors and constraints
 for (t in 1:(n.occasions-1)){
-   phiA[t] <- alpha[t] # fixed time effect 
+   phiA[t] ~ dunif(0, 1) # fixed time effect 
    logit(phiB[t]) <- mu + epsilon[t] # random time effect
    psiAB[t] <- mean.psi[1]
    psiBA[t] <- mean.psi[2]
@@ -222,6 +225,14 @@ for (i in 1:nind){
    } #i
 }
 ")
+
+
+# Load multistate capture-histories
+data <- read.csv("dat/multistate.csv", sep = ";")
+ch <- as.matrix(data)
+ch
+nrow(ch)
+ncol(ch)
 
 
 # Compute vector with occasion of first capture
@@ -337,7 +348,7 @@ model {
    # pB  detection prob. of breeders
    # psiNBB transition prob. from non-breeder to breeder
    # psiBNB transition prob. from breeder to non-breeder
-   # piNB prob. of being in initial state non-breeder
+   # piB prob. of being in initial state breeder
    # deltaNB prob to ascertain the breeding status of an individual encountered as non-breeder
    # deltaB prob to ascertain the breeding status of an individual encountered as breeder
    

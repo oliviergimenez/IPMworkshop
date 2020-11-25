@@ -146,7 +146,7 @@ cjs.c.c <- jags(data = jags.data,
                 n.thin = nt, 
                 n.iter = ni, 
                 n.burnin = nb)
-
+?jags
 # Summarize posteriors
 print(cjs.c.c, digits = 3)
 
@@ -301,7 +301,7 @@ model {
     mean.phi ~ dunif(0, 1)                   # Prior for mean survival
     mu <- logit(mean.phi)                    # Logit transformation
     sigma ~ dunif(0, 5)                      # Prior for standard deviation
-    tau <- pow(sigma, -2)
+    tau <- pow(sigma, -2) 
     sigma2 <- pow(sigma, 2)                  # Temporal variance
     
     # Likelihood 
