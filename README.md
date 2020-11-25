@@ -1,5 +1,5 @@
 
-# Capture-recapture models in JAGS.
+# Capture-recapture models in JAGS
 
 This repository contains the material (slides, data and R code) I used
 for a workshop on Integrated Population Models (IPMs) we held online 23
@@ -10,7 +10,8 @@ I introduce capture-recapture models in a state-space / hidden Markov
 modeling framework. I also show how to fit these models in Jags. I cover
 Cormack-Jolly-Seber, Arnason-Schwarz, multistate and multievent models.
 
-:movie\_camera: The video recordings are available on [Youtube]().
+:movie\_camera: The video recordings are available on Youtube
+[here](https://www.youtube.com/playlist?list=PL5CiXbb9zgjTNp9_ZH4TvpxDJrfY-ztOv).
 
 ## Contents
 
