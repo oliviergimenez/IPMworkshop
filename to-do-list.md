@@ -1,8 +1,5 @@
-Overall
-
-- Write text of the slides
-- Prepare a slide or two on waic for cjs then anova, with sim and dipper
-
+- ~~Write text of the slides~~
+- ~~Prepare a slide or two on waic for cjs then anova, with sim and dipper~~
 - ~~Shall I use tablet/stylet?~~
 - ~~Tell how many neff we need for convergence~~
 - ~~A few words to tell how we met back in Montpellier > 15 years ago Marc, Michael and I; Roger/Jean-Do in common, we're like cousin; introduce Maud~~
